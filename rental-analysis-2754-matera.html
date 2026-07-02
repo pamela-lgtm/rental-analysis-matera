@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rental Pricing Analysis — 2754 Matera Drive | Verandah Properties LLC</title>
+<meta property="og:title" content="Rental Pricing Analysis &amp; Leasing Strategy — 2754 Matera Drive">
+<meta property="og:description" content="A data-backed rental pricing analysis for 2754 Matera Drive, Split Oak Estates, prepared by Pamela Syvertson, Owner &amp; Broker, Verandah Properties LLC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#008C82;
+    --teal-deep:#006B63;
+    --teal-tint:#EAF5F4;
+    --gold:#D4AF50;
+    --gold-soft:#F6EED9;
+    --charcoal:#1A1A1A;
+    --ink:#2B2B2B;
+    --muted:#6E6E6E;
+    --line:#E3E3DE;
+    --paper:#FDFCFA;
+    --red:#B0483A;
+    --green:#2E7D5B;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Jost',sans-serif;
+    font-weight:400;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.65;
+    font-size:16.5px;
+  }
+  .page{max-width:880px;margin:0 auto;padding:0 28px 80px}
+
+  /* ---------- Letterhead ---------- */
+  header{
+    text-align:center;
+    padding:64px 0 36px;
+    border-bottom:3px double var(--gold);
+    margin-bottom:8px;
+  }
+  .brand{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:700;
+    font-size:clamp(30px,5vw,44px);
+    letter-spacing:.14em;
+    color:var(--teal);
+    text-transform:uppercase;
+  }
+  .tagline{
+    font-style:italic;
+    color:var(--gold);
+    letter-spacing:.06em;
+    font-size:15px;
+    margin-top:2px;
+  }
+  .doc-title{
+    margin-top:34px;
+    font-weight:600;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    font-size:14px;
+    color:var(--charcoal);
+  }
+  .property{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(24px,4vw,32px);
+    font-weight:600;
+    color:var(--charcoal);
+    margin-top:8px;
+  }
+  .meta{
+    margin-top:10px;
+    font-size:13.5px;
+    color:var(--muted);
+    letter-spacing:.05em;
+  }
+  .meta span{white-space:nowrap}
+  .meta .dot{color:var(--gold);margin:0 10px}
+
+  /* ---------- Sections ---------- */
+  section{padding:44px 0 6px}
+  h2{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:700;
+    font-size:clamp(25px,3.6vw,31px);
+    color:var(--teal);
+    line-height:1.2;
+    margin-bottom:6px;
+  }
+  h2 + .kicker{
+    font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:18px;
+  }
+  h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:700;font-size:22px;color:var(--charcoal);
+    margin:28px 0 10px;
+  }
+  p{margin-bottom:16px}
+  strong{font-weight:600;color:var(--charcoal)}
+  .lead{font-size:18px}
+
+  .callout{
+    background:var(--teal-tint);
+    border-left:4px solid var(--teal);
+    padding:20px 24px;
+    margin:22px 0;
+    border-radius:0 6px 6px 0;
+  }
+  .callout p{margin:0}
+  .callout .big{
+    font-family:'Cormorant Garamond',serif;
+    font-size:21px;font-weight:600;color:var(--teal-deep);
+  }
+
+  /* ---------- Comp table ---------- */
+  .table-wrap{overflow-x:auto;margin:24px 0 8px;border:1px solid var(--line);border-radius:8px}
+  table{width:100%;border-collapse:collapse;min-width:680px;background:#fff}
+  thead th{
+    background:var(--teal);color:#fff;
+    font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+    padding:12px 12px;text-align:center;
+  }
+  thead th:first-child{text-align:left}
+  tbody td{
+    padding:12px 12px;border-top:1px solid var(--line);
+    font-size:15px;text-align:center;white-space:nowrap;
+  }
+  tbody td:first-child{text-align:left;font-weight:500;color:var(--charcoal)}
+  tbody tr.hero-row{background:var(--gold-soft)}
+  tbody tr.hero-row td{font-weight:600}
+  .was{color:var(--muted);text-decoration:line-through;margin-right:8px;font-size:13.5px}
+  .arrow{color:var(--gold);margin:0 4px}
+  .days{
+    display:inline-block;min-width:56px;padding:2px 10px;border-radius:999px;
+    font-size:13px;font-weight:600;
+  }
+  .fast{background:#E4F2EB;color:var(--green)}
+  .slow{background:#F6E7E4;color:var(--red)}
+  .mid{background:#F3EFE2;color:#8A6D1F}
+  .table-note{font-size:13px;color:var(--muted);font-style:italic;margin:10px 4px 0}
+
+  /* ---------- One house, two strategies ---------- */
+  .duel{
+    display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:26px 0 10px;
+  }
+  .duel-card{
+    border:1px solid var(--line);border-radius:10px;padding:26px 24px;background:#fff;
+    position:relative;overflow:hidden;
+  }
+  .duel-card.win{border-color:var(--teal);box-shadow:0 6px 24px rgba(0,140,130,.10)}
+  .duel-tag{
+    font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:12px;
+  }
+  .duel-card.lose .duel-tag{color:var(--red)}
+  .duel-card.win .duel-tag{color:var(--teal)}
+  .duel-price{
+    font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700;color:var(--charcoal);line-height:1;
+  }
+  .duel-sub{font-size:13.5px;color:var(--muted);margin:4px 0 16px}
+  .duel-result{font-size:15px}
+  .duel-result strong{font-size:17px}
+  .duel-house{
+    text-align:center;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--muted);margin-top:14px;
+  }
+
+  /* ---------- Levers ---------- */
+  .levers{display:grid;gap:16px;margin:24px 0}
+  .lever{
+    border:1px solid var(--line);border-radius:10px;background:#fff;
+    padding:22px 24px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;
+  }
+  .lever-icon{
+    width:44px;height:44px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Cormorant Garamond',serif;font-weight:700;font-size:22px;
+    background:var(--teal-tint);color:var(--teal);flex-shrink:0;margin-top:2px;
+  }
+  .lever.gold .lever-icon{background:var(--gold-soft);color:#8A6D1F}
+  .lever h4{font-family:'Jost',sans-serif;font-weight:600;font-size:16.5px;color:var(--charcoal);margin-bottom:4px}
+  .lever p{margin:0;font-size:15.5px}
+
+  /* ---------- Scenario cards ---------- */
+  .scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0 8px}
+  .scen{
+    border:1px solid var(--line);border-radius:10px;background:#fff;padding:24px 20px;text-align:center;
+  }
+  .scen.rec{border-color:var(--gold);background:linear-gradient(180deg,#FFFDF7,#fff);box-shadow:0 6px 24px rgba(212,175,80,.15)}
+  .scen .label{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--muted);min-height:32px}
+  .scen.rec .label{color:#8A6D1F}
+  .scen .ask{font-size:14px;color:var(--muted);margin-top:12px}
+  .scen .ask b{color:var(--charcoal);font-weight:600}
+  .scen .eff{
+    font-family:'Cormorant Garamond',serif;font-weight:700;font-size:34px;line-height:1.05;
+    margin-top:12px;color:var(--charcoal);
+  }
+  .scen.rec .eff{color:var(--teal)}
+  .scen .eff-label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+  .scen .detail{font-size:13.5px;color:var(--muted);margin-top:12px;line-height:1.5}
+
+  /* ---------- Recommendation ---------- */
+  .rec-list{list-style:none;margin:22px 0}
+  .rec-list li{
+    padding:18px 0 18px 34px;border-bottom:1px solid var(--line);position:relative;
+  }
+  .rec-list li:last-child{border-bottom:none}
+  .rec-list li::before{
+    content:"";position:absolute;left:6px;top:27px;width:9px;height:9px;
+    background:var(--gold);transform:rotate(45deg);
+  }
+  .rec-list b{font-weight:600;color:var(--charcoal)}
+
+  /* ---------- Signature / footer ---------- */
+  .sign{
+    margin-top:56px;padding-top:28px;border-top:3px double var(--gold);
+  }
+  .sign .name{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--charcoal)}
+  .sign .cred{font-size:13.5px;color:var(--muted);letter-spacing:.04em;margin-top:2px}
+  .disclaimer{
+    margin-top:26px;font-size:12px;color:var(--muted);font-style:italic;line-height:1.6;
+  }
+
+  @media (max-width:720px){
+    .duel,.scenarios{grid-template-columns:1fr}
+    .lever{grid-template-columns:auto 1fr}
+    body{font-size:16px}
+  }
+  @media print{
+    body{background:#fff}
+    .page{max-width:100%;padding:0 6px}
+    .duel-card.win,.scen.rec{box-shadow:none}
+    section{padding:26px 0 4px}
+    header{padding:20px 0 22px}
+    thead th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .table-wrap,.duel-card,.scen,.lever,.callout{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand">Verandah Properties</div>
+    <div class="tagline">Curating Lake Nona&rsquo;s Finest Rental Portfolio</div>
+    <div class="doc-title">Rental Pricing Analysis &amp; Leasing Strategy</div>
+    <div class="property">2754 Matera Drive &middot; Split Oak Estates</div>
+    <div class="meta">
+      <span>St.&nbsp;Cloud, FL 34771</span><span class="dot">&#9670;</span>
+      <span>Prepared for Luan Pham</span><span class="dot">&#9670;</span>
+      <span>July 2, 2026</span><span class="dot">&#9670;</span>
+      <span>Pamela Syvertson, Owner &amp; Broker</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Why This Analysis Reads Differently</h2>
+    <div class="kicker">Our Interests Are Aligned</div>
+    <p class="lead">Some agents will quote you the highest number to win a listing, then quietly reduce the price until the property finally rents. I want to be direct with you from the start: <strong>no agent can &ldquo;get&rdquo; more rent than another agent.</strong> The market &mdash; how many options a renter has, and what they are actually signing leases for &mdash; determines the rent.</p>
+    <p>My job is to read that data honestly, position your investment property to lease quickly to the most qualified applicant, and protect the number that actually matters: your effective annual income. I only succeed when your investment property is leased and performing &mdash; not when it sits on the market at an impressive asking price.</p>
+  </section>
+
+  <section>
+    <h2>Bedroom Classification &mdash; An Important Note</h2>
+    <div class="kicker">Priced Per Owner Representation</div>
+    <p>The Osceola County tax record reflects this investment property as a <strong>3&nbsp;bedroom / 2.5&nbsp;bath</strong>. Per your confirmation that the flex room includes a closet and functions as a true fourth bedroom, <strong>this analysis is priced &mdash; and the home will be marketed &mdash; as a 4&nbsp;bedroom, based on your representation.</strong></p>
+    <p>This matters: a 3-bedroom competes in a lower rent band, and every comparable in this analysis is a 4- or 5-bedroom home. We will feature the fourth bedroom clearly in photography so applicants see exactly what they are leasing.</p>
+  </section>
+
+  <section>
+    <h2>The Market Reality in This Corridor</h2>
+    <div class="kicker">Closed Lease Data &middot; Stellar MLS / CoreLogic &middot; Pulled July 2, 2026</div>
+    <p>The Narcoossee/Cyrils Drive corridor is one of the most rental-saturated pockets in Central Florida right now. Bridgewalk, Weslyn Park, Springhead Lakes, and the surrounding Sunbridge neighborhoods are releasing continuous new construction &mdash; much of it bought by investors and immediately listed for rent, some with solar power, included internet, or lawn care bundled in. <strong>Renters in this corridor know they have options, and the leasing data proves they are behaving accordingly.</strong></p>
+    <p>Below is every relevant lease closed in the immediate area over roughly the last four months. Watch the pattern between the <em>original asking rent</em>, the <em>rent it actually leased for</em>, and the days it sat vacant:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Comparable</th><th>Community</th><th>Bed/Bath</th><th>SqFt</th><th>Started &rarr; Leased</th><th>Days Vacant</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hero-row">
+            <td>2965 Howley Aly</td><td>Bridgewalk</td><td>4/3.5</td><td>2,466</td>
+            <td>$2,595 <span class="arrow">&rarr;</span> $2,595</td>
+            <td><span class="days fast">13</span></td>
+          </tr>
+          <tr>
+            <td>2953 Howley Aly</td><td>Bridgewalk</td><td>5/3</td><td>2,450</td>
+            <td><span class="was">$2,795</span>$2,650</td>
+            <td><span class="days mid">42</span></td>
+          </tr>
+          <tr>
+            <td>3233 Addison Blvd</td><td>Bridgewalk</td><td>4/3</td><td>2,204</td>
+            <td><span class="was">$2,750</span>$2,500</td>
+            <td><span class="days mid">54</span></td>
+          </tr>
+          <tr>
+            <td>5637 Nina Way*</td><td>Springhead Lakes</td><td>4/3</td><td>2,199</td>
+            <td>$2,700 <span class="arrow">&rarr;</span> $2,700</td>
+            <td><span class="days mid">58</span></td>
+          </tr>
+          <tr>
+            <td>5604 Quiet Palm Loop</td><td>Bridgewalk</td><td>4/3</td><td>2,061</td>
+            <td><span class="was">$2,600</span>$2,550</td>
+            <td><span class="days mid">66</span></td>
+          </tr>
+          <tr>
+            <td>5704 Sunbonnet Way</td><td>Suncrest</td><td>5/3</td><td>2,626</td>
+            <td><span class="was">$2,750</span>$2,595</td>
+            <td><span class="days slow">117</span></td>
+          </tr>
+          <tr>
+            <td>5685 Arborvista Dr</td><td>Split Oak Reserve</td><td>4/2</td><td>2,197</td>
+            <td><span class="was">$2,650</span>$2,500</td>
+            <td><span class="days slow">170</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">*5637 Nina Way was brand-new 2025 construction with internet, lawn care, and CAM included in the rent &mdash; effectively a discounted $2,700.</p>
+
+    <div class="callout">
+      <p><span class="big">The median leased rent is $2,595.</span> Every home that launched above $2,700 was reduced and sat 42&ndash;170 days. The one home priced at the market from day one &mdash; 2965 Howley Alley &mdash; <strong>leased in 13 days at full asking price.</strong></p>
+    </div>
+
+    <h3>The Clearest Proof in the Data: One House, Two Strategies</h3>
+    <p>5704 Sunbonnet Way tells the whole story by itself &mdash; the same home has now been leased under both strategies:</p>
+
+    <div class="duel">
+      <div class="duel-card lose">
+        <div class="duel-tag">Prior Cycle &mdash; &ldquo;Test the Market&rdquo;</div>
+        <div class="duel-price">$2,700</div>
+        <div class="duel-sub">original asking rent</div>
+        <div class="duel-result">Reduced repeatedly. Months of vacancy.<br>Finally leased at <strong>$2,500</strong>.</div>
+      </div>
+      <div class="duel-card win">
+        <div class="duel-tag">This Spring &mdash; Priced Right, Day One</div>
+        <div class="duel-price">$2,500</div>
+        <div class="duel-sub">original asking rent</div>
+        <div class="duel-result">Pending in <strong>12 days</strong>.<br>Zero reductions. Minimal vacancy.</div>
+      </div>
+    </div>
+    <div class="duel-house">Same house &middot; same street &middot; same market &mdash; the only variable was the pricing strategy</div>
+
+    <p style="margin-top:26px">The two homes currently active &mdash; asking <strong>$2,800</strong> and <strong>$3,100</strong> &mdash; are the competition we will be positioned against. Based on everything above, they are likely at the start of their own reduction cycles. We don&rsquo;t want to join them; <strong>we want to lease while they sit.</strong></p>
+  </section>
+
+  <section>
+    <h2>The Three Things That Rent a Home</h2>
+    <div class="kicker">Location &middot; Condition &middot; Price</div>
+    <div class="levers">
+      <div class="lever">
+        <div class="lever-icon">L</div>
+        <div>
+          <h4>Location &mdash; fixed</h4>
+          <p>Minutes from Lake Nona and Medical City, which is a genuine draw &mdash; but the investment property carries a St.&nbsp;Cloud address and competes directly with brand-new construction on all sides. We can&rsquo;t change this lever.</p>
+        </div>
+      </div>
+      <div class="lever gold">
+        <div class="lever-icon">C</div>
+        <div>
+          <h4>Condition &mdash; excellent, and this is your edge</h4>
+          <p>Immaculate presentation, hard-surface flooring in a neutral gray palette throughout, a built-in summer kitchen on a pavered, screened lanai, a fully fenced yard, and a two-car garage. <strong>None of the leased comparables offered this outdoor living package.</strong> At equal pricing, these are exactly the tie-breakers that make a qualified renter choose your investment property over the new build down the street.</p>
+        </div>
+      </div>
+      <div class="lever">
+        <div class="lever-icon">P</div>
+        <div>
+          <h4>Price &mdash; the only lever we control</h4>
+          <p>One honest caution on size: this home is substantially larger than the comparable set, and square footage does not scale rent the way owners hope. Renters shop by bedroom count and monthly payment, and this corridor&rsquo;s leased ceiling is real &mdash; $2,700 was the top of the market, achieved once, by new construction with utilities bundled in. Extra square footage priced aggressively doesn&rsquo;t earn a premium; it prices the home out of the search results entirely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The Math That Actually Matters: Effective Rent</h2>
+    <div class="kicker">Vacancy Can Never Be Recouped</div>
+    <p>A dollar of lost rent is gone forever, and it must be factored back into what the lease actually earned over twelve months. Here is the math on this specific home:</p>
+
+    <div class="scenarios">
+      <div class="scen">
+        <div class="label">&ldquo;Test the Market&rdquo;</div>
+        <div class="ask">Ask <b>$2,800</b> &middot; 60 days vacant &middot; leases at <b>$2,500</b></div>
+        <div class="eff">&asymp;$2,083</div>
+        <div class="eff-label">Effective Monthly Rent</div>
+        <div class="detail">Two lost months &asymp; $5,000, eroding &asymp;$417 from every month of the lease &mdash; plus a listing renters begin to read as stale.</div>
+      </div>
+      <div class="scen rec">
+        <div class="label">Priced at Market, Day One &mdash; Recommended</div>
+        <div class="ask">Launch <b>$2,595</b> &middot; &asymp;14 days &middot; leases at <b>$2,595</b></div>
+        <div class="eff">&asymp;$2,487</div>
+        <div class="eff-label">Effective Monthly Rent</div>
+        <div class="detail">The 2965 Howley Alley playbook &mdash; full asking price, 13 days, no reductions, and the strongest effective rent of any strategy.</div>
+      </div>
+      <div class="scen">
+        <div class="label">Owner&rsquo;s Option &mdash; Launch Higher</div>
+        <div class="ask">Launch <b>$2,650</b> &middot; &asymp;30+ days &middot; leases &asymp;<b>$2,595</b></div>
+        <div class="eff">&asymp;$2,379</div>
+        <div class="eff-label">Effective Monthly Rent</div>
+        <div class="detail">Available if you prefer to test the top of the band &mdash; but the data shows homes launching above the median sit 42+ days, and every vacant week erodes the gain.</div>
+      </div>
+    </div>
+
+    <p>Chasing an extra $200 per month on paper costs $400+ per month in reality.</p>
+    <p>And there is a second cost that never shows up in the math: <strong>applicant quality.</strong> A correctly priced home generates a surge of interest in the first week, which gives us a <em>pool</em> of applications to screen against Verandah&rsquo;s 100-point qualification standard &mdash; we choose the strongest applicant. An overpriced home trickles one marginal application at a time, and the decision becomes &ldquo;take this applicant or keep paying for vacancy.&rdquo; Maximum interest is what produces the best-qualified renter, and pricing is what produces maximum interest.</p>
+  </section>
+
+  <section>
+    <h2>A Word on Rent vs. Your Expenses</h2>
+    <div class="kicker">What the Market Pays &middot; What the Asset Builds</div>
+    <p>One expectation worth addressing directly: many owners hope the rent will cover all of their holding expenses &mdash; the mortgage, taxes, insurance, the full debt service. It&rsquo;s a natural instinct, but here is the honest truth: <strong>the market rent has nothing to do with the owner&rsquo;s expenses.</strong> A renter pays what comparable homes lease for &mdash; never a dollar more because of what an owner happens to owe.</p>
+    <p>Consider how professional investors operate: they search relentlessly, crunch the data on dozens of properties, and negotiate hard on the purchase price itself &mdash; all to engineer even a modest $100+ per month in cash flow. That&rsquo;s the game they&rsquo;re playing, and it&rsquo;s won at the moment of purchase, not at the moment of leasing.</p>
+    <p><strong>That is not this situation &mdash; and that&rsquo;s not a bad thing.</strong> This home was purchased and enjoyed as a primary residence and is now being transitioned into a rental investment property. The rent it commands will contribute meaningfully toward your holding expenses, but it will not fully cover them &mdash; and no pricing strategy can change that, because the market sets the rent, not the mortgage statement.</p>
+    <div class="callout">
+      <p><span class="big">Here&rsquo;s the savvy way to frame it:</span> every month this investment property is leased, another person is paying down your mortgage principal and building your equity for you &mdash; while you retain the asset, its appreciation in one of Central Florida&rsquo;s strongest growth corridors, and every dollar of future upside. A modest monthly contribution from your own pocket is buying you long-term wealth that someone else is largely funding. That is a genuinely smart position to be in &mdash; as long as the home is leased. Which brings us back to the one thing that makes all of it work: <strong>pricing it to rent.</strong></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>My Recommendation</h2>
+    <div class="kicker">Lease in 30 Days or Less</div>
+    <ul class="rec-list">
+      <li><b>Launch at $2,595 &mdash; the leased median, priced to move.</b> This is the proven playbook in this exact corridor: the one comparable that launched at $2,595 leased in 13 days at full asking price. Positioned $205&ndash;$505 below both active competitors, with the fourth bedroom, the summer kitchen, the screened pavered lanai, and the fenced yard as the tie-breakers, your investment property becomes the obvious choice in the search results on day one &mdash; and that surge of first-week interest is what fills the applicant pool with well-qualified renters.</li>
+      <li><b>Hard checkpoint at day 7.</b> If showing activity and application volume aren&rsquo;t where they need to be, we reduce decisively &mdash; to $2,550, then $2,500 if required. No slow $25 drips that follow the market down; the comparables above show exactly where that road ends.</li>
+      <li><b>Target: an executed lease within 30 days</b> &mdash; realistically well under &mdash; at an expected $2,500&ndash;$2,595, with the applicant chosen from a competitive pool rather than accepted out of necessity.</li>
+      <li><b>Your call, made with clear eyes.</b> If you prefer to launch at $2,650 to test the top of the band, we can absolutely take that path &mdash; with a firm agreement that we reduce to $2,595 at the day-7 checkpoint if the market doesn&rsquo;t respond. What I won&rsquo;t recommend is starting high and hoping: the seven reduction trails in the comparable table show exactly how that story ends.</li>
+    </ul>
+    <p>I&rsquo;d rather have a brief, honest conversation about pricing today than a frustrating one about reductions in week six. Priced correctly, this is a beautiful investment property that should lease quickly, to a well-qualified renter, at the strongest effective rent the market will genuinely pay.</p>
+  </section>
+
+  <div class="sign">
+    <div class="name">Pamela Syvertson</div>
+    <div class="cred">Owner &amp; Broker &middot; Verandah Properties LLC &middot; License CQ1048619 &middot; NARPM Member</div>
+    <p class="disclaimer">This document is an opinion of rental value based on closed lease data from Stellar MLS/CoreLogic as of July 2, 2026 and should not be considered an appraisal. Comparable data is deemed reliable but not guaranteed. Bedroom count is presented per owner representation; Osceola County tax records reflect 3&nbsp;bedrooms / 2.5&nbsp;baths.</p>
+  </div>
+
+</div>
+</body>
+</html>
